@@ -11,4 +11,6 @@ export interface AppData {
   complexity: number;
   releaseDate: string;
   link: string;
+  githubUrl?: string;
+  additionalInfo?: string;
 }

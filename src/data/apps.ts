@@ -13,7 +13,9 @@ export const apps: AppData[] = [
     rating: 4.8,
     complexity: 3,
     releaseDate: 'November 2024',
-    link: 'https://create.town/'
+    link: 'https://create.town/',
+    githubUrl: 'https://github.com/shaoruu/create.town',
+    additionalInfo: 'This platform serves as a creative canvas for users to design and build their own virtual towns.<p>It offers tools and features that enable the construction of personalized town layouts, catering to enthusiasts of urban planning, game design, or storytelling.'
   },
   {
     id: 'shadcn-studio',
@@ -27,7 +29,9 @@ export const apps: AppData[] = [
     rating: 4.5,
     complexity: 2,
     releaseDate: 'March 2023',
-    link: 'https://github.com/nextauthjs/next-auth'
+    link: 'https://shadcn-studio.vercel.app',
+    githubUrl: 'https://github.com/shadcn/shadcn-studio',
+    additionalInfo: 'A comprehensive visual editor for Shadcn UI components featuring real-time preview, code export, and theme customization capabilities.'
   },
   {
     id: 'next-auth-dashboard',
@@ -41,7 +45,9 @@ export const apps: AppData[] = [
     rating: 4.7,
     complexity: 4,
     releaseDate: 'February 2023',
-    link: 'https://github.com/nextauthjs/next-auth'
+    link: 'https://next-auth-dashboard.vercel.app',
+    githubUrl: 'https://github.com/nextauthjs/next-auth',
+    additionalInfo: 'A robust authentication solution offering OAuth integration, role-based access control, and comprehensive session management with security best practices.'
   },
   {
     id: 'tailwind-themes',
@@ -55,7 +61,9 @@ export const apps: AppData[] = [
     rating: 4.3,
     complexity: 2,
     releaseDate: 'April 2023',
-    link: 'https://github.com/tailwindlabs/tailwindcss'
+    link: 'https://tailwind-themes.vercel.app',
+    githubUrl: 'https://github.com/tailwindlabs/tailwindcss',
+    additionalInfo: 'An extensive collection of ready-to-use Tailwind CSS themes with seamless dark/light mode integration and customization options.'
   },
   {
     id: 'api-forge',
@@ -69,7 +77,9 @@ export const apps: AppData[] = [
     rating: 4.6,
     complexity: 3,
     releaseDate: 'May 2023',
-    link: 'https://github.com/swagger-api/swagger-ui'
+    link: 'https://api-forge.vercel.app',
+    githubUrl: 'https://github.com/swagger-api/swagger-ui',
+    additionalInfo: 'Streamline your API development workflow with automatic documentation generation, testing tools, and OpenAPI specification support.'
   },
   {
     id: 'devflow',
@@ -83,132 +93,8 @@ export const apps: AppData[] = [
     rating: 4.9,
     complexity: 4,
     releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
-  },
-  {
-    id: 'devflow',
-    title: 'DevFlow',
-    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
-    image: '/images/apps/devflow.jpg',
-    author: 'DevOps Dojo',
-    authorImage: '/images/authors/devops-dojo.jpg',
-    authorLink: 'https://vercel.com',
-    category: 'Productivity',
-    rating: 4.9,
-    complexity: 4,
-    releaseDate: 'June 2023',
-    link: 'https://github.com/vercel/vercel'
+    link: 'https://devflow.vercel.app',
+    githubUrl: 'https://github.com/vercel/vercel',
+    additionalInfo: 'Enhance your development workflow with seamless integration between GitHub, JIRA, and Slack, featuring automated task tracking and progress updates.'
   }
 ];

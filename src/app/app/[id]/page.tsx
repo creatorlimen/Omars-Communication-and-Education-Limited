@@ -152,9 +152,9 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
               <span>Visit App</span>
             </a>
             
-            {app.link.includes('github.com') && (
+            {app.githubUrl && (
               <a 
-                href={app.link} 
+                href={app.githubUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-6 py-2.5 text-sm font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 border border-gray-800/30"
@@ -167,12 +167,16 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
         </div>
       </div>
       
-      <div className="mt-8 space-y-4">
+      <div className="mt-8 space-y-6">
         <h2 className="text-2xl font-bold tracking-tight text-[#F5F5F5]">Additional Information</h2>
-        <div className="bg-[#1A1A1A] p-4 rounded-xl border border-gray-800/30">
-          <p className="text-[#F5F5F5]/90 text-base leading-relaxed">
-            This section contains additional details and notes about the application. Here you can find more information about features, usage instructions, or any other relevant details.
-          </p>
+        <div className="bg-[#1A1A1A] p-6 rounded-xl border border-gray-800/30 space-y-4">
+          {app.additionalInfo ? 
+            app.additionalInfo.split('<p>').map((text, index) => (
+              <p key={index} className="text-[#AAAAAA]">{text}</p>
+            ))
+            : 
+            <p className="text-[#AAAAAA]">No additional information available for this app.</p>
+          }
         </div>
       </div>
     </div>
