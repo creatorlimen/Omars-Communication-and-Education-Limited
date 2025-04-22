@@ -42,7 +42,7 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
   };
   
   return (
-    <div className="max-w-4xl mx-auto pb-12">
+    <div className="container mx-auto max-w-6.5xl px-4 py-8">
       <div className="mb-8">
         <Link 
           href="/" 
@@ -53,17 +53,49 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
         </Link>
       </div>
       
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div className="relative h-[358px] md:h-[458px] w-full overflow-hidden rounded-xl bg-[#1A1A1A] border border-gray-800/30">
-          {!app.image ? (
-            <PlaceholderImage 
-              seed={app.title} 
-              className="w-full h-full" 
-              text={app.title}
-            />
-          ) : (
-            <Image src={app.image} alt={app.title} fill className="object-cover" priority />
-          )}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-[#1A1A1A] border border-gray-800/30">
+            {!app.image ? (
+              <PlaceholderImage 
+                seed={app.title} 
+                className="w-full h-full" 
+                text={app.title}
+              />
+            ) : (
+              <Image 
+                src={app.image} 
+                alt={app.title} 
+                fill 
+                className="object-cover" 
+                priority 
+              />
+            )}
+          </div>
+
+          <div className="flex gap-4 mt-4">
+            <a 
+              href={app.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2.5 text-sm font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center justify-center gap-2 flex-1"
+            >
+              <ExternalLink size={16} />
+              <span>Visit App</span>
+            </a>
+            
+            {app.githubUrl && (
+              <a 
+                href={app.githubUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-6 py-2.5 text-sm font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 border border-gray-800/30"
+              >
+                <Github size={16} />
+                <span>GitHub</span>
+              </a>
+            )}
+          </div>
         </div>
         
         <div className="space-y-6">
@@ -139,30 +171,6 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
                 </defs>
               </svg>
             </div>
-          </div>
-          
-          <div className="flex space-x-4">
-            <a 
-              href={app.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2.5 text-sm font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center justify-center gap-2 flex-1"
-            >
-              <ExternalLink size={16} />
-              <span>Visit App</span>
-            </a>
-            
-            {app.githubUrl && (
-              <a 
-                href={app.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-6 py-2.5 text-sm font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 border border-gray-800/30"
-              >
-                <Github size={16} />
-                <span>GitHub</span>
-              </a>
-            )}
           </div>
         </div>
       </div>

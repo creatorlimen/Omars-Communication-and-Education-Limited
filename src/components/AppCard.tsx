@@ -55,7 +55,7 @@ export default function AppCard({
 
       {/* Main content */}
       <div className="relative rounded-xl p-5 bg-[#010101] border border-gray-800/30 transition-all duration-300 hover:border-[#D4AF37]/30 hover:translate-y-[-2px] group">
-        <div className="relative mb-4 h-48 w-full overflow-hidden rounded-lg">
+        <div className="relative w-full aspect-[16/9] mb-4 rounded-lg overflow-hidden">
           {!image ? (
             <PlaceholderImage 
               seed={title} 
@@ -63,14 +63,21 @@ export default function AppCard({
               text={title}
             />
           ) : (
-            <Image src={image} alt={title} fill className="object-cover" priority />
+            <Image 
+              src={image} 
+              alt={title} 
+              fill 
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority 
+            />
           )}
         </div>
 
         <div className="space-y-3">
-          <h2 className="text-xl font-semibold leading-tight text-[#F5F5F5]">{title}</h2>
+          <h2 className="text-xl font-semibold leading-tight text-[#F5F5F5] line-clamp-1">{title}</h2>
 
-          <p className="text-s text-[#AAAAAA]">{description}</p>
+          <p className="text-s text-[#AAAAAA] line-clamp-2 min-h-[40px]">{description}</p>
 
           <div className="flex items-center gap-2">
             <span className="text-s font-medium text-[#F5F5F5]">DEVELOPER:</span>
