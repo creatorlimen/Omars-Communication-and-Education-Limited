@@ -38,5 +38,5 @@ next-env.d.ts
 .env
 
 # project specific
-PLAN.md
+plan.md
 instructions.md
