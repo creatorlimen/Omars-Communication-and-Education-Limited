@@ -54,7 +54,7 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col">
+        <div className="flex flex-col self-stretch">
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-[#1A1A1A] border border-gray-800/30">
             {!app.image ? (
               <PlaceholderImage 
@@ -73,7 +73,7 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
             )}
           </div>
 
-          <div className="flex gap-4 mt-4">
+          <div className="flex gap-4 mt-auto pt-4">
             <a 
               href={app.link} 
               target="_blank" 
@@ -98,7 +98,7 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
           </div>
         </div>
         
-        <div className="space-y-6">
+        <div className="flex flex-col self-stretch">
           <div>
             <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent mb-4">
               {app.title}
@@ -109,14 +109,14 @@ export default function AppDetailsPage({ params }: AppDetailsPageProps) {
             <p className="text-[#F5F5F5]/90 text-lg leading-relaxed">{app.description}</p>
           </div>
 
-          <div className="flex items-center p-4 border border-purple-800/50 rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-500/10 via-purple-400/10 to-purple-500/10 transition-all hover:opacity-90 hover:scale-105">
+          <div className="flex items-center p-4 mt-6 border border-purple-800/50 rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-500/10 via-purple-400/10 to-purple-500/10 transition-all hover:opacity-90 hover:scale-105">
             <div>
               <p className="text-[#F5F5F5] font-medium">{app.author}</p>
               <p className="text-[#AAAAAA] text-sm">Developer</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 mt-auto pt-4">
             <div className="p-4 border border-purple-800/50 rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-500/10 via-purple-400/10 to-purple-500/10 transition-all hover:opacity-90 hover:scale-105">
               <h3 className="text-[#AAAAAA] text-sm mb-2">Category</h3>
               <p className="text-[#F5F5F5]">{app.category}</p>
