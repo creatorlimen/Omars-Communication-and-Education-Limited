@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <div className="fixed top-4 left-0 right-0 z-50 flex justify-center">
-      <div className="max-w-6.5xl w-full bg-black/80 border border-purple-800/30 rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-500/9 via-purple-400/9 to-purple-500/9">
+      <div className="max-w-6.5xl w-full bg-black/80 border border-purple-800/30 rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-500/10 via-purple-400/10 to-purple-500/10">
         <div className="px-6">
           <div className="flex items-center justify-between h-16">
             <div className="flex-1">
@@ -23,7 +23,7 @@ export default function Header() {
               <a 
                 href="https://forms.gle/hJ24foh11QynzBHf8"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="text-[#F5F5F5] hover:text-[#AAAAAA] transition-all hover:scale-105 text-center text-sm font-medium tracking-wide uppercase"
               >
                 Submit Your App

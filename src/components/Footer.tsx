@@ -11,8 +11,8 @@ export default function Footer() {
           <div>
             <h3 className="text-[#F5F5F5] font-semibold mb-4">About</h3>
             <p className="text-[#AAAAAA] text-sm">
-              Cursor-Built Apps Directory is a community-passion project that showcases applications built with the Cursor IDE.<br /><br />
-              Explore what developers have created with this powerful tool, and see what is possible, so you too can go ahead and build.
+              This Directory for Cursor-Built Apps is a community-passion project that showcases applications built with the Cursor IDE.<br /><br />
+              Explore what people have created with this powerful tool, and see what is possible, so you too can go ahead and build.
             </p>
           </div>
 
@@ -48,22 +48,27 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#features" className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors text-sm">
-                  Features
+                  Showcase
                 </Link>
               </li>
               <li>
-                <Link href="#showcase" className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors text-sm">
-                  Showcase
-                </Link>
+                <a 
+                  href="https://forms.gle/hJ24foh11QynzBHf8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors text-sm"
+                >
+                  Submit Your App
+                </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-[#F5F5F5] font-semibold mb-4">Connect</h3>
+            <h3 className="text-[#F5F5F5] font-semibold mb-4">Cursor Links</h3>
             <div className="space-y-2">
               <a 
-                href="https://www.cursor.so" 
+                href="https://www.cursor.com" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors text-sm block"
@@ -77,7 +82,7 @@ export default function Footer() {
                 className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors text-sm inline-flex items-center gap-2"
               >
                 <Github size={14} />
-                <span>GitHub</span>
+                <span>Cursor GitHub</span>
               </a>
             </div>
           </div>
@@ -85,7 +90,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-800/30 text-center">
           <p className="text-[#AAAAAA] text-sm">
-            &copy; {new Date().getFullYear()}. Cursor-Built Apps Directory.
+             {new Date().getFullYear()}. Directory For Cursor-Built Apps .
           </p>
         </div>
       </div>

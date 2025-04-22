@@ -32,16 +32,16 @@ export default function Home() {
   return (
     <div className="space-y-4">
       <header className="space-y-6 text-center py-12">
-        <h1 className="text-9xl font-bold tracking-tight bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent">
-          Cursor-Built Apps
+        <h1 className="text-8xl font-bold tracking-tight bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent">
+          Directory For Cursor-Built Apps
         </h1>
         <p className="mx-auto max-w-2xl text-xl text-[#F5F5F5]/90 leading-relaxed">
-          Discover amazing applications built with the Cursor&copy; IDE. From productivity tools to 
+          Discover amazing applications built using the Cursor IDE. <br />From productivity tools to 
           development utilities, explore what the community has created.
-        </p>
+        </p><br />
         <p className="mx-auto max-w-2xl text-xl text-[#F5F5F5]/90 leading-relaxed bg-[#1A1A1A] p-4 rounded-xl border border-gray-800/30">
-          Disclaimer: This site is not an official part of the Cursor&copy; Company.<br /><br /> I built it as a passion project to showcase the amazing apps built using the equally amazing Cursor Platform. <br /><br />
-          Any similarities with the official Cursor&copy; site is just me trying to convey the Cursor&copy; &ldquo;feeling&rdquo;. Shoutout to the Cursor&copy; Team.
+          Disclaimer: This site is not an official part of the Cursor&copy; Company.<br /><br /> I built it as a passion project to showcase the amazing apps built using the equally amazing Platform. <br /><br />
+          Any similarities with the official site is just me trying to mirror the company's vibe. Shoutout to the Cursor Team😊.
         </p>
       </header>
 
