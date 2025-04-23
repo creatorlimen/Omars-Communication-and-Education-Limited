@@ -7,7 +7,7 @@ const nextConfig = {
         hostname: "firebasestorage.googleapis.com",
       },
     ],
-    unoptimized: true
+    // Removed unoptimized flag to test production rendering
   },
 };
 
