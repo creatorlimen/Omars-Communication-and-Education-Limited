@@ -1,0 +1,88 @@
+import { AppData } from '../interfaces/app';
+
+export const apps: AppData[] = [
+  {
+    id: 'ry-os',
+    title: 'ryOS',
+    description: 'A web-based OS experience.',
+    image: '/images/apps/ry-os.jpg',
+    author: 'Ryo Lu',
+    authorLink: 'https://x.com/ryolu_',
+    category: 'Development',
+    rating: 4.8,
+    releaseDate: 'January 2025',
+    link: 'https://os.ryo.lu/',
+    githubUrl: undefined,
+    additionalInfo: 'This project is a playful exploration of personal computing that blends nostalgic Macintosh-style interfaces with modern web technologies and AI.<br /><br /> It’s both an art piece and a functional tool — a browser-based experiment in building systems that feel personal, creative, and human, not just utilitarian.<br /><br />At its heart, it’s about reimagining how we interact with technology when it becomes an intuitive extension of thought — where the interface fades away and what remains is pure vibe.'
+  },
+  {
+    id: 'create-town',
+    title: 'Create . Town',
+    description: 'This platform serves as a creative canvas for users to design and build their own virtual towns.',
+    image: '/images/apps/create-town.jpg',
+    author: 'Shaoru Ian Huang',
+    authorLink: 'https://x.com/shaoruu',
+    category: 'Design',
+    rating: 4.8,
+    releaseDate: 'November 2024',
+    link: 'https://create.town/',
+    githubUrl: 'https://github.com/shaoruu/create.town',
+    additionalInfo: 'This platform serves as a creative canvas for users to design and build their own virtual towns.<p>It offers tools and features that enable the construction of personalized town layouts, catering to enthusiasts of urban planning, game design, or storytelling.'
+  },
+  {
+    id: 'fly-pieter-com',
+    title: 'Fly.Pieter.Com',
+    description: '3d flying game in-browser.',
+    image: '/images/apps/fly-pieter-com.jpg',
+    author: 'Pieter Levels',
+    authorLink: 'https://x.com/levelsio',
+    category: 'Gaming',
+    rating: 4.5,
+    releaseDate: 'March 2023',
+    link: 'https://shadcn-studio.vercel.app',
+    githubUrl: 'https://github.com/levelsio',
+    additionalInfo: 'A fun free-to-play MMO flight sim, 100% made with AI, without loading screens and GBs of updates every time you wanna play.'
+  },
+  {
+    id: 'tailwind-themes',
+    title: 'Tailwind Themes',
+    description: 'A collection of customizable themes for Tailwind CSS with support for dark/light mode switching.',
+    image: '/images/apps/tailwind-themes.jpg',
+    author: 'CSS Wizards',
+    authorLink: 'https://tailwindcss.com',
+    category: 'Design',
+    rating: 4.3,
+    releaseDate: 'April 2023',
+    link: 'https://tailwind-themes.vercel.app',
+    githubUrl: 'https://github.com/tailwindlabs/tailwindcss',
+    additionalInfo: 'An extensive collection of ready-to-use Tailwind CSS themes with seamless dark/light mode integration and customization options.'
+  },
+  {
+    id: 'api-forge',
+    title: 'API Forge',
+    description: 'A tool for quickly creating, testing, and documenting RESTful APIs with automatic OpenAPI specification generation.',
+    image: '/images/apps/api-forge.jpg',
+    author: 'API Guild',
+    authorLink: 'https://swagger.io',
+    category: 'Development',
+    rating: 4.6,
+    releaseDate: 'May 2023',
+    link: 'https://api-forge.vercel.app',
+    githubUrl: 'https://github.com/swagger-api/swagger-ui',
+    additionalInfo: 'Streamline your API development workflow with automatic documentation generation, testing tools, and OpenAPI specification support.'
+  },
+  {
+    id: 'devflow',
+    title: 'DevFlow',
+    description: 'A developer workflow tool that integrates with GitHub, JIRA, and Slack to streamline your development process.',
+    image: '/images/apps/devflow.jpg',
+    author: 'DevOps Dojo',
+    authorLink: 'https://vercel.com',
+    category: 'Productivity',
+    rating: 4.9,
+    releaseDate: 'June 2023',
+    link: 'https://devflow.vercel.app',
+    githubUrl: 'https://github.com/vercel/vercel',
+    additionalInfo: 'Enhance your development workflow with seamless integration between GitHub, JIRA, and Slack, featuring automated task tracking and progress updates.'
+  }
+];
