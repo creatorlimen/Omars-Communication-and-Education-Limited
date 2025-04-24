@@ -28,7 +28,7 @@ export default function Footer() {
                 X / Twitter
               </a>
               <a 
-                href="www.linkedin.com/in/adekunlegbadebo"
+                href="https://www.linkedin.com/in/adekunlegbadebo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors text-sm inline-flex items-center gap-2"

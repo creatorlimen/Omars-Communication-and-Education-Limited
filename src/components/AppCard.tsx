@@ -169,7 +169,7 @@ export default function AppCard({
                 href={`/app/${id}`} 
                 className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2 text-s font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center justify-center gap-2"
               >
-                <span>Full Details</span>
+                <span>Details</span>
                 <ChevronRight size={14} />
               </Link>
             </div>

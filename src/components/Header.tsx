@@ -19,7 +19,7 @@ export default function Header() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex flex-1 justify-center space-x-8">
+            <nav className="hidden lg:flex flex-1 justify-center space-x-8">
               <Link href="/" className="text-[#F5F5F5] hover:text-[#AAAAAA] transition-all hover:scale-105 text-center text-sm font-medium tracking-wide uppercase">
                 Directory
               </Link>
@@ -39,13 +39,13 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-[#F5F5F5] hover:text-[#AAAAAA] transition-colors"
+              className="lg:hidden p-2 text-[#F5F5F5] hover:text-[#AAAAAA] transition-colors"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
 
-            <div className="flex-1 flex justify-end">
+            <div className="flex-1 hidden lg:flex justify-end">
               <a 
                 href="https://www.cursor.com" 
                 target="_blank"
@@ -62,7 +62,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
           <nav className="flex flex-col space-y-4 px-6 py-4 border-t border-purple-800/30">
             <Link 
               href="/" 
