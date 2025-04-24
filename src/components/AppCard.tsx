@@ -148,9 +148,17 @@ export default function AppCard({
           </div>
 
           <div className="flex items-center justify-between pt-2">
-            <div className="text-xs text-[#AAAAAA]">Released: {releaseDate}</div>
+            <div className="flex flex-col text-xs text-[#AAAAAA]">
+              <span>Released:</span>
+              <span>{releaseDate}</span>
+            </div>
 
             <div className="flex items-center gap-4">
+              <Link href={`/app/${id}`} className="flex items-center text-xs text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
+                <span>Full Details</span>
+                <ChevronRight size={14} className="text-gradient-to-r from-purple-400 via-pink-500 to-orange-500" />
+              </Link>
+
               <a 
                 href={link} 
                 target="_blank" 
@@ -160,11 +168,6 @@ export default function AppCard({
                 <span>Visit</span>
                 <ExternalLink size={14} />
               </a>
-
-              <Link href={`/app/${id}`} className="flex items-center text-xs text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
-                <span>Full Details</span>
-                <ChevronRight size={14} className="text-gradient-to-r from-purple-400 via-pink-500 to-orange-500" />
-              </Link>
             </div>
           </div>
         </div>
