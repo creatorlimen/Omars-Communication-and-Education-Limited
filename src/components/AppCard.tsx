@@ -97,7 +97,7 @@ export default function AppCard({
             )}
           </div>
 
-          <div className="grid grid-cols-2 gap-4 pt-2 text-center">
+          <div className="grid grid-cols-3 gap-4 pt-2 text-center">
             <div className="flex flex-col items-center relative">
               <span className="text-s text-[#F5F5F5]">Rating</span>
               <div className="flex">
@@ -142,32 +142,36 @@ export default function AppCard({
             </div>
 
             <div className="flex flex-col items-center">
+              <span className="text-s text-[#F5F5F5]">Released</span>
+              <span className="text-xs text-[#AAAAAA]">{releaseDate}</span>
+            </div>
+
+            <div className="flex flex-col items-center">
               <span className="text-s text-[#F5F5F5]">Category</span>
               <span className="text-xs text-[#AAAAAA]">{category}</span>
             </div>
           </div>
 
           <div className="flex items-center justify-between pt-2">
-            <div className="flex flex-col text-xs text-[#AAAAAA]">
-              <span>Released:</span>
-              <span>{releaseDate}</span>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <Link href={`/app/${id}`} className="flex items-center text-xs text-[#AAAAAA] hover:text-[#F5F5F5] transition-colors">
-                <span>Full Details</span>
-                <ChevronRight size={14} className="text-gradient-to-r from-purple-400 via-pink-500 to-orange-500" />
-              </Link>
-
+            <div className="flex-1"></div>
+            <div className="grid grid-cols-2 gap-4 w-full">
               <a 
                 href={link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2 text-s font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center gap-2"
+                className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2 text-s font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center justify-center gap-2"
               >
                 <span>Visit</span>
                 <ExternalLink size={14} />
               </a>
+
+              <Link 
+                href={`/app/${id}`} 
+                className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2 text-s font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <span>Full Details</span>
+                <ChevronRight size={14} />
+              </Link>
             </div>
           </div>
         </div>
