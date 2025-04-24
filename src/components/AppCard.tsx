@@ -159,7 +159,7 @@ export default function AppCard({
                 href={link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 px-6 py-2 text-s font-medium text-[#F5F5F5] transition-all hover:opacity-90 hover:scale-105 flex items-center justify-center gap-2"
+                className="rounded-full border border-purple-800/30 bg-purple-900/40 px-6 py-2 text-s font-medium text-[#F5F5F5] transition-all hover:bg-purple-500/20 hover:border-purple-500/30 flex items-center justify-center gap-2"
               >
                 <span>Visit</span>
                 <ExternalLink size={14} />
