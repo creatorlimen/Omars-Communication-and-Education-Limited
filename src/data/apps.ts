@@ -17,7 +17,7 @@ export const apps: AppData[] = [
   },
   {
     id: 'create-town',
-    title: 'Create . Town',
+    title: 'Create Town',
     description: 'This platform serves as a creative canvas for users to design and build their own virtual towns. Let your imagination take the reins and create magic.',
     image: '/images/apps/create-town.jpg',
     author: 'Shaoru Ian Huang',
