@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styling */
+* {
+  @apply transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+/* Typography */
+h1, h2, h3 {
+  @apply text-gray-900;
+}
+
+a {
+  @apply text-blue-600 hover:text-blue-700;
+}
+
+/* Accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+/* Utility Classes */
+.container-center {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.gradient-primary {
+  @apply bg-gradient-to-r from-blue-900 to-blue-700;
+}
+
+.gradient-secondary {
+  @apply bg-gradient-to-r from-green-50 to-blue-50;
+}
