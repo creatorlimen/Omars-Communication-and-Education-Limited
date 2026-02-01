@@ -149,26 +149,26 @@ export default function Programs() {
         </section>
 
         {/* CTA */}
-        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-primary via-primary to-primary/80 py-20 sm:py-28 overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-2xl" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight mb-6">
               Ready to Get Involved?
             </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8 font-medium">
+            <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8 font-medium">
               Whether you&apos;re a student ready to participate, an educator wanting to collaborate, or a partner interested in supporting our programs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <Button size="lg" className="gap-2 rounded-full bg-white text-primary shadow-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Button size="lg" className="gap-2 rounded-full bg-white text-black shadow-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   Get Involved <ArrowRight size={18} />
                 </Button>
               </Link>
               <Link href="/partnerships">
-                <Button size="lg" variant="outline" className="rounded-full border-white text-white hover:bg-white/10 font-bold transition-all duration-300">
+                <Button size="lg" variant="outline" className="rounded-full border-2 border-white text-black bg-white/10 hover:bg-white/20 font-bold transition-all duration-300">
                   Collaborate
                 </Button>
               </Link>

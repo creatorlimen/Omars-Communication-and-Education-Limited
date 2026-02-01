@@ -281,23 +281,23 @@ export default function Contact() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 text-white py-20 sm:py-28 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-primary via-primary to-primary/80 text-white py-20 sm:py-28 overflow-hidden">
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-2xl" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+            <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <span className="text-sm font-black text-white uppercase tracking-wider">✨ Make An Impact</span>
             </span>
             <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight mb-6">
               Ready to Make a Difference?
             </h2>
-            <p className="text-lg text-white/80 font-medium max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-white/90 font-medium max-w-2xl mx-auto mb-8">
               Your involvement matters. Whether as a student, educator, partner, or sponsor, you can help us transform education and amplify young voices.
             </p>
             <a href="#" onClick={() => document.getElementById('message')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 rounded-full font-bold transition-all duration-300 hover:scale-105">
+              <Button size="lg" className="bg-white text-primary shadow-lg shadow-black/20 rounded-full font-bold transition-all duration-300 hover:scale-105">
                 Get in Touch
               </Button>
             </a>
