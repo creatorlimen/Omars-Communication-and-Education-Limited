@@ -2,9 +2,57 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
-import { BookOpen, Users, Megaphone, Heart, ArrowRight } from 'lucide-react';
+import { BookOpen, Users, Megaphone, Heart, ArrowRight, GraduationCap, Target, Lightbulb, Award, Handshake, Globe } from 'lucide-react';
 
 export default function Home() {
+  const efforts = [
+    {
+      icon: GraduationCap,
+      title: 'Scholarship Support',
+      description: 'We provide educational support and scholarships to less-privileged students to help reduce barriers to learning and create equal access to quality education.',
+    },
+    {
+      icon: Users,
+      title: 'Workshops & Capacity Building',
+      description: 'We organize educational workshops focused on literacy, communication, creative expression, and personal development for students and educators.',
+    },
+    {
+      icon: Heart,
+      title: 'Gender Inclusion Programs',
+      description: 'We design and implement initiatives that promote gender inclusion, encourage equal participation, and amplify underrepresented voices in education.',
+    },
+    {
+      icon: Target,
+      title: 'Community Engagement',
+      description: 'We work directly with schools and communities to raise awareness about education challenges and opportunities, fostering dialogue and collaborative solutions.',
+    },
+  ];
+
+  const collaborators = [
+    {
+      icon: Lightbulb,
+      title: 'Schools and Educational Institutions',
+      description: 'Collaborating on student engagement, workshops, and advocacy initiatives',
+    },
+    {
+      icon: Users,
+      title: 'NGOs and Advocacy Organisations',
+      description: 'Partnering on shared missions for education equity and social development',
+    },
+    {
+      icon: Award,
+      title: 'Community and Youth Groups',
+      description: 'Working together to reach and empower students at the grassroots level',
+    },
+    {
+      icon: Handshake,
+      title: 'Sponsors and Partners',
+      description: 'Supporting literacy, creativity, and education transformation initiatives',
+    },
+  ];
+
+  const sdgs = ['SDG 4: Quality Education', 'SDG 5: Gender Equality', 'SDG 10: Reduced Inequalities', 'SDG 17: Partnerships for the Goals'];
+
   return (
     <>
       <Navigation />
@@ -156,6 +204,136 @@ export default function Home() {
                   <p className="text-sm text-foreground/70 mt-2">Through words and storytelling</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Are */}
+        <section className="py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">Who We Are</h2>
+                <p className="text-foreground/80 leading-relaxed mb-4">
+                  Omars Communication and Education Limited promotes education through innovative initiatives and community engagement. We empower students, educators, and communities to create lasting impact.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  Our work spans from scholarship support and capacity building to gender inclusion programs and community engagement initiatives that address real educational challenges.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl h-80" />
+            </div>
+          </div>
+        </section>
+
+        {/* Why We Exist */}
+        <section className="bg-primary/5 py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl h-80 order-2 md:order-1" />
+              <div className="order-1 md:order-2">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">Why We Exist</h2>
+                <p className="text-foreground/80 leading-relaxed mb-4">
+                  Education gaps exist in access, literacy, and student empowerment. These gaps affect millions of learners who don&apos;t have platforms to express themselves or opportunities to develop essential skills.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  Omars bridges these gaps by giving learners platforms to express themselves and develop the communication, confidence, and creativity they need to thrive in a rapidly changing world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Vision and Mission */}
+        <section className="py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-card rounded-lg p-8 border border-border">
+                <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  A society where every learner has access to education, opportunities for self-expression, and support to thrive in their personal and professional lives.
+                </p>
+              </div>
+              <div className="bg-card rounded-lg p-8 border border-border">
+                <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  To advance education through advocacy, creative programs, and public engagement that empowers students and communities to create meaningful, lasting change.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Outreach Efforts */}
+        <section className="bg-primary/5 py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Our Outreach Efforts</h2>
+              <p className="text-foreground/70 max-w-2xl mx-auto">
+                Through strategic outreach and advocacy, we address educational inequalities and create tangible opportunities for students, educators, and communities.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {efforts.map((effort, index) => {
+                const Icon = effort.icon;
+                return (
+                  <div key={index} className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow">
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                      <Icon className="text-primary" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-primary mb-4">{effort.title}</h3>
+                    <p className="text-foreground/70 leading-relaxed">{effort.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Collaborate With */}
+        <section className="py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-primary mb-12 text-center">Who We Collaborate With</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {collaborators.map((collaborator) => {
+                const Icon = collaborator.icon;
+                return (
+                  <div key={collaborator.title} className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow">
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                      <Icon className="text-primary" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-primary mb-4">{collaborator.title}</h3>
+                    <p className="text-foreground/70">{collaborator.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* SDG Alignment */}
+        <section className="bg-primary/5 py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-4">UN Sustainable Development Goals</h2>
+              <p className="text-foreground/70 max-w-2xl mx-auto">
+                Our initiatives are aligned with the United Nations Sustainable Development Goals (SDGs), contributing to a more equitable, inclusive, and developed world.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+              {sdgs.map((sdg) => (
+                <div key={sdg} className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-6 border border-border">
+                  <Globe className="text-primary mb-4" size={28} />
+                  <p className="font-semibold text-primary">{sdg}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 bg-card rounded-lg p-8 border border-border max-w-3xl mx-auto">
+              <p className="text-foreground/80 leading-relaxed">
+                Our work contributes to building inclusive learning environments and promoting lifelong learning opportunities for all. By partnering with us, you directly support the global agenda for sustainable development.
+              </p>
             </div>
           </div>
         </section>
