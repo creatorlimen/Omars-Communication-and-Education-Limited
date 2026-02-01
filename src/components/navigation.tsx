@@ -21,29 +21,29 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#E8F5E9] border-b border-gray-200">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-teal-700 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 transition-all duration-300 group-hover:scale-105">
+              <span className="text-white font-black text-xl">O</span>
             </div>
-            <span className="font-bold text-lg text-teal-700">Omars</span>
+            <span className="font-black text-xl text-primary uppercase tracking-tight">Omars</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 text-sm font-semibold rounded-full transition-colors ${
+                  className={`px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${
                     isActive
-                      ? 'bg-teal-100 text-teal-700'
-                      : 'text-gray-700 hover:bg-teal-300 hover:text-teal-700'
+                      ? 'bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 scale-105'
+                      : 'text-gray-600 hover:bg-primary/5 hover:text-primary hover:shadow-md'
                   }`}
                 >
                   {item.label}
@@ -55,7 +55,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:bg-teal-50"
+            className="lg:hidden p-3 rounded-xl text-gray-600 hover:bg-primary/5 hover:text-primary transition-all duration-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -63,24 +63,26 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200 mt-2">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`block px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
-                    isActive
-                      ? 'bg-teal-100 text-teal-700'
-                      : 'text-gray-700 hover:bg-teal-50 hover:text-teal-700'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+          <div className="lg:hidden pb-6 pt-2 border-t border-gray-100 mt-2 animate-in slide-in-from-top-2 duration-200">
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`px-4 py-3 text-sm font-bold rounded-xl transition-all duration-300 ${
+                      isActive
+                        ? 'bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20'
+                        : 'text-gray-600 hover:bg-primary/5 hover:text-primary'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

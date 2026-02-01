@@ -56,17 +56,24 @@ export default function WhispersAndWords() {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-accent/20 to-background py-16 sm:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <Sparkles className="text-accent" size={28} />
-              <span className="text-sm font-semibold text-accent uppercase tracking-wide">Flagship Initiative</span>
+              <span className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Sparkles className="text-white" size={18} />
+                <span className="text-white font-bold text-sm uppercase tracking-wider">Flagship Initiative</span>
+              </span>
             </div>
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 text-primary">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">
                 Whispers and Words
               </h1>
-              <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              <p className="text-lg text-white/80 max-w-2xl mx-auto font-medium">
                 An annual celebration of young voices through spoken words, storytelling, and creative expression.
               </p>
             </div>
@@ -74,47 +81,55 @@ export default function WhispersAndWords() {
         </section>
 
         {/* What & Why */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-24 bg-gradient-to-b from-background to-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6">What Is It?</h2>
-                <p className="text-foreground/80 leading-relaxed mb-4">
-                  Whispers and Words is our signature annual competition that celebrates the power of creative expression and student voices. We bring together students from schools and communities across Lagos state to share their stories, poems, spoken word pieces, and creative works.
-                </p>
-                <p className="text-foreground/80 leading-relaxed">
-                  This initiative creates a safe, supportive space where young people can express themselves authentically, be heard, and discover the power of their own voice.
-                </p>
+              <div className="group bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:w-40 group-hover:h-40 transition-all duration-300" />
+                <div className="relative">
+                  <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">About</span>
+                  <h2 className="text-3xl font-black text-primary uppercase tracking-tight mb-6">What Is It?</h2>
+                  <p className="text-gray-600 font-medium leading-relaxed mb-4">
+                    Whispers and Words is our signature annual competition that celebrates the power of creative expression and student voices. We bring together students from schools and communities across Lagos state to share their stories, poems, spoken word pieces, and creative works.
+                  </p>
+                  <p className="text-gray-600 font-medium leading-relaxed">
+                    This initiative creates a safe, supportive space where young people can express themselves authentically, be heard, and discover the power of their own voice.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6">Why It Matters</h2>
-                <div className="space-y-4">
-                  <div className="flex gap-3">
-                    <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Builds Confidence</p>
-                      <p className="text-sm text-foreground/70">Students develop self-assurance through creative expression and public speaking.</p>
+              <div className="group bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:w-40 group-hover:h-40 transition-all duration-300" />
+                <div className="relative">
+                  <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Impact</span>
+                  <h2 className="text-3xl font-black text-primary uppercase tracking-tight mb-6">Why It Matters</h2>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-sm">✓</span>
+                      <div>
+                        <p className="font-bold text-primary">Builds Confidence</p>
+                        <p className="text-sm text-gray-600 font-medium">Students develop self-assurance through creative expression.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Enhances Literacy</p>
-                      <p className="text-sm text-foreground/70">Creative writing and storytelling improve communication and language skills.</p>
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-sm">✓</span>
+                      <div>
+                        <p className="font-bold text-primary">Enhances Literacy</p>
+                        <p className="text-sm text-gray-600 font-medium">Creative writing improves communication skills.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Fosters Creativity</p>
-                      <p className="text-sm text-foreground/70">Students explore new ideas and perspectives through various art forms.</p>
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-sm">✓</span>
+                      <div>
+                        <p className="font-bold text-primary">Fosters Creativity</p>
+                        <p className="text-sm text-gray-600 font-medium">Students explore ideas through various art forms.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Creates Community</p>
-                      <p className="text-sm text-foreground/70">Connects young people with shared interests and mutual encouragement.</p>
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-sm">✓</span>
+                      <div>
+                        <p className="font-bold text-primary">Creates Community</p>
+                        <p className="text-sm text-gray-600 font-medium">Connects young people with shared interests.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -124,55 +139,70 @@ export default function WhispersAndWords() {
         </section>
 
         {/* Who It's For */}
-        <section className="bg-primary/5 py-16 sm:py-24">
+        <section className="py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary mb-6 text-center">Who It&apos;s For</h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto text-center mb-12">
-              Whispers and Words welcomes all students in schools and communities across Lagos state who are passionate about storytelling, creative writing, and self-expression.
-            </p>
+            <div className="text-center mb-12">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Eligibility</span>
+              <h2 className="text-3xl sm:text-4xl font-black text-primary uppercase tracking-tight mb-4">Who It&apos;s For</h2>
+              <p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto">
+                Whispers and Words welcomes all students in schools and communities across Lagos state who are passionate about storytelling, creative writing, and self-expression.
+              </p>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <h3 className="text-lg font-semibold text-primary mb-3">Requirements</h3>
-                <ul className="space-y-2 text-sm text-foreground/70">
-                  <li className="flex gap-2">
-                    <span className="text-accent">✓</span>
-                    Must be a student (secondary or tertiary level)
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent">✓</span>
-                    Located in or connected to Lagos state
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent">✓</span>
-                    Passionate about creative expression
-                  </li>
-                </ul>
+              <div className="group bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:w-40 group-hover:h-40 transition-all duration-300" />
+                <div className="relative">
+                  <h3 className="text-lg font-black text-primary uppercase tracking-tight mb-4">Requirements</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <span className="w-6 h-6 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+                      <span className="font-medium text-gray-700">Must be a student (secondary or tertiary level)</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-6 h-6 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+                      <span className="font-medium text-gray-700">Located in or connected to Lagos state</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-6 h-6 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+                      <span className="font-medium text-gray-700">Passionate about creative expression</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <h3 className="text-lg font-semibold text-primary mb-3">No Experience Needed</h3>
-                <p className="text-sm text-foreground/70">
-                  Whether you&apos;re a beginner sharing your first story or an experienced performer, we welcome all skill levels. Our workshops help you develop and refine your craft.
-                </p>
+              <div className="group bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:w-40 group-hover:h-40 transition-all duration-300" />
+                <div className="relative">
+                  <h3 className="text-lg font-black text-primary uppercase tracking-tight mb-4">No Experience Needed</h3>
+                  <p className="text-gray-600 font-medium">
+                    Whether you&apos;re a beginner sharing your first story or an experienced performer, we welcome all skill levels. Our workshops help you develop and refine your craft.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Benefits */}
-        <section className="py-16 sm:py-24">
+        <section className="bg-gradient-to-b from-muted/30 to-background py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary mb-12 text-center">Benefits of Participating</h2>
+            <div className="text-center mb-12">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Advantages</span>
+              <h2 className="text-3xl sm:text-4xl font-black text-primary uppercase tracking-tight">Benefits of Participating</h2>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit) => {
                 const Icon = benefit.icon;
                 return (
-                  <div key={benefit.title} className="bg-card rounded-lg p-6 border border-border text-center hover:shadow-lg transition-shadow">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Icon className="text-primary" size={24} />
+                  <div key={benefit.title} className="group bg-white rounded-2xl border border-gray-100 p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:w-40 group-hover:h-40 transition-all duration-300" />
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg shadow-primary/20 flex items-center justify-center mx-auto mb-4">
+                        <Icon size={24} />
+                      </div>
+                      <h3 className="font-black text-primary uppercase tracking-tight mb-3">{benefit.title}</h3>
+                      <p className="text-sm text-gray-600 font-medium">{benefit.description}</p>
                     </div>
-                    <h3 className="font-semibold text-primary mb-3">{benefit.title}</h3>
-                    <p className="text-sm text-foreground/70">{benefit.description}</p>
                   </div>
                 );
               })}
@@ -181,23 +211,31 @@ export default function WhispersAndWords() {
         </section>
 
         {/* How to Participate */}
-        <section className="bg-primary/5 py-16 sm:py-24">
+        <section className="py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary mb-12 text-center">How to Participate</h2>
+            <div className="text-center mb-12">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Get Started</span>
+              <h2 className="text-3xl sm:text-4xl font-black text-primary uppercase tracking-tight">How to Participate</h2>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step) => (
                 <div key={step.number} className="relative">
-                  <div className="bg-card rounded-lg p-6 border border-border h-full">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-bold text-lg">
-                        {step.number}
+                  <div className="group bg-white rounded-2xl border border-gray-100 p-6 h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full group-hover:w-40 group-hover:h-40 transition-all duration-300" />
+                    <div className="relative">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg shadow-primary/20 flex items-center justify-center font-black text-lg">
+                          {step.number}
+                        </div>
                       </div>
-                      <h3 className="font-semibold text-primary">{step.title}</h3>
+                      <h3 className="font-black text-primary uppercase tracking-tight mb-2">{step.title}</h3>
+                      <p className="text-sm text-gray-600 font-medium">{step.description}</p>
                     </div>
-                    <p className="text-sm text-foreground/70">{step.description}</p>
                   </div>
                   {parseInt(step.number) < 4 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-0.5 bg-border -translate-y-1/2" />
+                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 text-primary -translate-y-1/2">
+                      <ArrowRight size={24} />
+                    </div>
                   )}
                 </div>
               ))}
@@ -206,22 +244,26 @@ export default function WhispersAndWords() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-primary text-primary-foreground py-16 sm:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight mb-6">
               Ready to Share Your Story?
             </h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8 font-medium">
               Join us and amplify your voice. Submit your entry today and become part of the Whispers and Words community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <Button size="lg" variant="secondary" className="gap-2">
+                <Button size="lg" className="gap-2 rounded-full bg-white text-primary shadow-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   Submit Your Entry <ArrowRight size={18} />
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent">
+                <Button size="lg" variant="outline" className="rounded-full border-white text-white hover:bg-white/10 font-bold transition-all duration-300">
                   Learn More
                 </Button>
               </Link>

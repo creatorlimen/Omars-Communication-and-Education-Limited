@@ -123,3 +123,112 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Modern Design System Utilities */
+@layer components {
+  /* Hero Section Base */
+  .hero-section {
+    @apply relative overflow-hidden py-20 bg-gradient-to-br from-secondary via-secondary to-primary/20;
+  }
+  
+  /* Decorative blur circles */
+  .blur-circle-top {
+    @apply absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none;
+  }
+  
+  .blur-circle-bottom {
+    @apply absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl pointer-events-none;
+  }
+  
+  /* Hero pill label */
+  .hero-pill {
+    @apply inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 text-sm font-black uppercase tracking-wider text-white;
+  }
+  
+  /* Hero typography */
+  .hero-title {
+    @apply text-4xl md:text-5xl font-black uppercase tracking-tight text-white;
+  }
+  
+  .hero-description {
+    @apply text-lg text-white/80 max-w-2xl font-medium;
+  }
+  
+  /* Modern card base */
+  .card-modern {
+    @apply bg-white rounded-2xl border border-gray-100 overflow-hidden relative hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  /* Card decorative corner */
+  .card-corner {
+    @apply absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full transition-all duration-300;
+  }
+  
+  .group:hover .card-corner-expand {
+    @apply w-40 h-40;
+  }
+  
+  /* Section label */
+  .section-label {
+    @apply text-sm font-black text-gray-500 uppercase tracking-wider mb-4;
+  }
+  
+  /* Modern heading */
+  .heading-modern {
+    @apply font-black uppercase tracking-tight;
+  }
+  
+  /* Pill button active */
+  .btn-pill-active {
+    @apply bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 scale-105 rounded-full font-bold text-sm transition-all duration-300;
+  }
+  
+  /* Pill button inactive */
+  .btn-pill-inactive {
+    @apply bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md;
+  }
+  
+  /* Category badge */
+  .badge-category {
+    @apply bg-gradient-to-r from-primary to-primary/80 text-white px-4 py-1.5 text-xs font-black uppercase rounded-full shadow-sm;
+  }
+  
+  /* Status badge */
+  .badge-status {
+    @apply bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-bold;
+  }
+  
+  /* Icon container small */
+  .icon-container-sm {
+    @apply w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xs;
+  }
+  
+  /* Icon container large */
+  .icon-container-lg {
+    @apply w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg shadow-primary/20 flex items-center justify-center;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    @apply w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin;
+  }
+  
+  /* Info box */
+  .info-box {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-lg p-6;
+  }
+  
+  /* Highlight section */
+  .highlight-section {
+    @apply bg-primary/5 rounded-lg p-3;
+  }
+  
+  /* List with icon */
+  .list-icon-item {
+    @apply flex items-center gap-3;
+  }
+  
+  .list-icon-check {
+    @apply w-6 h-6 rounded-lg bg-green-100 flex items-center justify-center text-green-600;
+  }
+}

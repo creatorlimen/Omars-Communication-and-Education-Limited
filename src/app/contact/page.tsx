@@ -85,13 +85,20 @@ export default function Contact() {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 text-primary">
+              <span className="inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                <span className="text-sm font-black text-white uppercase tracking-wider">📩 Get In Touch</span>
+              </span>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6">
                 Contact & Get Involved
               </h1>
-              <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              <p className="text-lg text-white/80 max-w-2xl mx-auto font-medium">
                 Join us in transforming education. We&apos;re excited to hear from you and explore how we can work together.
               </p>
             </div>
@@ -99,23 +106,29 @@ export default function Contact() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-24 bg-gradient-to-b from-background to-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary mb-12 text-center">Ways to Reach Us</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
+            <div className="text-center mb-12">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Contact Methods</span>
+              <h2 className="text-3xl font-black uppercase tracking-tight text-primary">Ways to Reach Us</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
               {contactMethods.map((method) => {
                 const Icon = method.icon;
                 return (
                   <a
                     key={method.title}
                     href={method.link}
-                    className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow"
+                    className="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                   >
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="text-primary" size={24} />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full transition-all duration-300 group-hover:w-40 group-hover:h-40" />
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg shadow-primary/20 flex items-center justify-center mb-4">
+                        <Icon size={24} />
+                      </div>
+                      <h3 className="font-bold uppercase tracking-tight text-primary mb-2">{method.title}</h3>
+                      <p className="text-gray-600 font-medium">{method.value}</p>
                     </div>
-                    <h3 className="font-semibold text-primary mb-2">{method.title}</h3>
-                    <p className="text-foreground/70">{method.value}</p>
                   </a>
                 );
               })}
@@ -123,8 +136,8 @@ export default function Contact() {
 
             {/* Social Media */}
             <div className="text-center mb-12">
-              <h3 className="text-lg font-semibold text-primary mb-6">Follow Us</h3>
-              <div className="flex justify-center gap-4">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-6 block">Follow Us</span>
+              <div className="flex justify-center gap-4 flex-wrap">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
@@ -133,11 +146,11 @@ export default function Contact() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border border-border hover:bg-primary/5 transition-colors"
+                      className="group flex items-center gap-2 px-4 py-3 bg-white rounded-full border border-gray-200 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-300"
                       title={social.name}
                     >
                       <Icon size={20} className="text-primary" />
-                      <span className="text-sm font-medium text-foreground">{social.label}</span>
+                      <span className="text-sm font-bold text-gray-600 group-hover:text-primary">{social.label}</span>
                     </a>
                   );
                 })}
@@ -147,18 +160,21 @@ export default function Contact() {
         </section>
 
         {/* Contact Form */}
-        <section className="bg-primary/5 py-16 sm:py-24">
+        <section className="bg-muted/30 py-16 sm:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-card rounded-lg border border-border p-8 sm:p-12">
-              <h2 className="text-3xl font-bold text-primary mb-2 text-center">Send Us a Message</h2>
-              <p className="text-foreground/70 text-center mb-8">
-                Fill out the form below and we&apos;ll get back to you as soon as possible.
-              </p>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 sm:p-12">
+              <div className="text-center mb-8">
+                <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Contact Form</span>
+                <h2 className="text-3xl font-black uppercase tracking-tight text-primary mb-2">Send Us a Message</h2>
+                <p className="text-gray-600 font-medium">
+                  Fill out the form below and we&apos;ll get back to you as soon as possible.
+                </p>
+              </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-primary mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-bold text-primary mb-2 uppercase tracking-wider">
                       First Name *
                     </label>
                     <Input
@@ -168,10 +184,11 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       placeholder="Enter your first name"
+                      className="rounded-xl border-gray-200 focus:border-primary focus:ring-primary/20"
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-primary mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-bold text-primary mb-2 uppercase tracking-wider">
                       Last Name *
                     </label>
                     <Input
@@ -181,12 +198,13 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       placeholder="Enter your last name"
+                      className="rounded-xl border-gray-200 focus:border-primary focus:ring-primary/20"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
+                  <label htmlFor="email" className="block text-sm font-bold text-primary mb-2 uppercase tracking-wider">
                     Email *
                   </label>
                   <Input
@@ -197,11 +215,12 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Enter your email"
+                    className="rounded-xl border-gray-200 focus:border-primary focus:ring-primary/20"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-primary mb-2">
+                  <label htmlFor="phone" className="block text-sm font-bold text-primary mb-2 uppercase tracking-wider">
                     Phone (Optional)
                   </label>
                   <Input
@@ -211,11 +230,12 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Enter your phone number"
+                    className="rounded-xl border-gray-200 focus:border-primary focus:ring-primary/20"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-primary mb-2">
+                  <label htmlFor="message" className="block text-sm font-bold text-primary mb-2 uppercase tracking-wider">
                     Message *
                   </label>
                   <Textarea
@@ -225,11 +245,11 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Tell us how we can help or how you'd like to get involved..."
-                    className="min-h-32"
+                    className="min-h-32 rounded-xl border-gray-200 focus:border-primary focus:ring-primary/20"
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 rounded-full font-bold transition-all duration-300 hover:scale-105">
                   Send Message
                 </Button>
               </form>
@@ -240,11 +260,20 @@ export default function Contact() {
         {/* Ways to Get Involved */}
         <section className="py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary mb-12 text-center">Ways to Get Involved</h2>
+            <div className="text-center mb-12">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Opportunities</span>
+              <h2 className="text-3xl font-black uppercase tracking-tight text-primary">Ways to Get Involved</h2>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {reasons.map((reason) => (
-                <div key={reason} className="bg-card rounded-lg p-6 border border-border text-center hover:shadow-lg transition-shadow">
-                  <p className="font-semibold text-primary">{reason}</p>
+                <div key={reason} className="group bg-white rounded-2xl p-6 border border-gray-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full transition-all duration-300 group-hover:w-40 group-hover:h-40" />
+                  <div className="relative">
+                    <span className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                      ✓
+                    </span>
+                    <p className="font-bold text-primary">{reason}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -252,16 +281,23 @@ export default function Contact() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-primary text-primary-foreground py-16 sm:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 text-white py-20 sm:py-28 overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span className="inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <span className="text-sm font-black text-white uppercase tracking-wider">✨ Make An Impact</span>
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight mb-6">
               Ready to Make a Difference?
             </h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-white/80 font-medium max-w-2xl mx-auto mb-8">
               Your involvement matters. Whether as a student, educator, partner, or sponsor, you can help us transform education and amplify young voices.
             </p>
             <a href="#" onClick={() => document.getElementById('message')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Button size="lg" variant="secondary">
+              <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 rounded-full font-bold transition-all duration-300 hover:scale-105">
                 Get in Touch
               </Button>
             </a>

@@ -33,13 +33,20 @@ export default function Outreach() {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-primary/5 to-background py-16 sm:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 text-primary">
+              <span className="inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                <span className="text-sm font-black text-white uppercase tracking-wider">🌍 Making Impact</span>
+              </span>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6">
                 Outreach & Advocacy
               </h1>
-              <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              <p className="text-lg text-white/80 max-w-2xl mx-auto font-medium">
                 At Omars Communication and Education Limited, outreach and advocacy are at the heart of our commitment to education promotion and community transformation.
               </p>
             </div>
@@ -47,11 +54,12 @@ export default function Outreach() {
         </section>
 
         {/* Intro */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-24 bg-gradient-to-b from-background to-muted/30">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Our Outreach Efforts</h2>
-              <p className="text-foreground/80 leading-relaxed">
+              <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">What We Do</span>
+              <h2 className="text-3xl font-black uppercase tracking-tight text-primary mb-6">Our Outreach Efforts</h2>
+              <p className="text-gray-600 font-medium leading-relaxed">
                 Through strategic outreach and advocacy, we address educational inequalities and create tangible opportunities for students, educators, and communities to access quality education and build sustainable futures.
               </p>
             </div>
@@ -59,18 +67,21 @@ export default function Outreach() {
         </section>
 
         {/* Efforts Grid */}
-        <section className="bg-primary/5 py-16 sm:py-24">
+        <section className="bg-muted/30 py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {efforts.map((effort, index) => {
                 const Icon = effort.icon;
                 return (
-                  <div key={index} className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow">
-                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                      <Icon className="text-primary" size={28} />
+                  <div key={index} className="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full transition-all duration-300 group-hover:w-40 group-hover:h-40" />
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg shadow-primary/20 flex items-center justify-center mb-6">
+                        <Icon size={28} />
+                      </div>
+                      <h3 className="text-xl font-bold uppercase tracking-tight text-primary mb-4">{effort.title}</h3>
+                      <p className="text-gray-600 font-medium leading-relaxed">{effort.description}</p>
                     </div>
-                    <h3 className="text-xl font-semibold text-primary mb-4">{effort.title}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{effort.description}</p>
                   </div>
                 );
               })}
@@ -81,43 +92,47 @@ export default function Outreach() {
         {/* Impact Statement */}
         <section className="py-16 sm:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-card rounded-lg p-8 sm:p-12 border border-border">
-              <h2 className="text-3xl font-bold text-primary mb-6">Our Impact</h2>
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-2">Reduced Educational Inequality</h3>
-                    <p className="text-foreground/70">
-                      By providing scholarships and removing barriers to access, we help ensure that financial constraints don&apos;t prevent students from pursuing quality education.
-                    </p>
+            <div className="bg-white rounded-2xl p-8 sm:p-12 border border-gray-100 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
+              <div className="relative">
+                <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Results</span>
+                <h2 className="text-3xl font-black uppercase tracking-tight text-primary mb-8">Our Impact</h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4 group">
+                    <div className="w-1 bg-gradient-to-b from-accent to-primary rounded-full flex-shrink-0 transition-all duration-300 group-hover:w-2" />
+                    <div>
+                      <h3 className="font-bold text-primary mb-2">Reduced Educational Inequality</h3>
+                      <p className="text-gray-600 font-medium">
+                        By providing scholarships and removing barriers to access, we help ensure that financial constraints don&apos;t prevent students from pursuing quality education.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-2">Strengthened Skills and Confidence</h3>
-                    <p className="text-foreground/70">
-                      Through workshops and capacity building programs, students and educators develop critical communication, literacy, and creative skills that enhance learning outcomes.
-                    </p>
+                  <div className="flex gap-4 group">
+                    <div className="w-1 bg-gradient-to-b from-accent to-primary rounded-full flex-shrink-0 transition-all duration-300 group-hover:w-2" />
+                    <div>
+                      <h3 className="font-bold text-primary mb-2">Strengthened Skills and Confidence</h3>
+                      <p className="text-gray-600 font-medium">
+                        Through workshops and capacity building programs, students and educators develop critical communication, literacy, and creative skills that enhance learning outcomes.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-2">Amplified Voices</h3>
-                    <p className="text-foreground/70">
-                      Our gender inclusion and community engagement initiatives ensure that all voices are heard, particularly those traditionally marginalized in education discussions.
-                    </p>
+                  <div className="flex gap-4 group">
+                    <div className="w-1 bg-gradient-to-b from-accent to-primary rounded-full flex-shrink-0 transition-all duration-300 group-hover:w-2" />
+                    <div>
+                      <h3 className="font-bold text-primary mb-2">Amplified Voices</h3>
+                      <p className="text-gray-600 font-medium">
+                        Our gender inclusion and community engagement initiatives ensure that all voices are heard, particularly those traditionally marginalized in education discussions.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-1 bg-accent rounded-full flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-2">Community Awareness and Engagement</h3>
-                    <p className="text-foreground/70">
-                      By fostering dialogue between schools, parents, educators, and communities, we create collaborative approaches to education challenges that are sustainable and locally relevant.
-                    </p>
+                  <div className="flex gap-4 group">
+                    <div className="w-1 bg-gradient-to-b from-accent to-primary rounded-full flex-shrink-0 transition-all duration-300 group-hover:w-2" />
+                    <div>
+                      <h3 className="font-bold text-primary mb-2">Community Awareness and Engagement</h3>
+                      <p className="text-gray-600 font-medium">
+                        By fostering dialogue between schools, parents, educators, and communities, we create collaborative approaches to education challenges that are sustainable and locally relevant.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -126,22 +141,29 @@ export default function Outreach() {
         </section>
 
         {/* CTA */}
-        <section className="bg-primary text-primary-foreground py-16 sm:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 text-white py-20 sm:py-28 overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span className="inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <span className="text-sm font-black text-white uppercase tracking-wider">🤝 Join Us</span>
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight mb-6">
               Support Our Outreach Efforts
             </h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-white/80 font-medium max-w-2xl mx-auto mb-8">
               Whether as a partner, sponsor, volunteer, or advocate, your support directly impacts the lives of students and communities we serve.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <Button size="lg" variant="secondary" className="gap-2">
+                <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 rounded-full font-bold transition-all duration-300 hover:scale-105 gap-2">
                   Get Involved <ArrowRight size={18} />
                 </Button>
               </Link>
               <Link href="/partnerships">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent">
+                <Button size="lg" variant="outline" className="rounded-full font-bold border-white text-white hover:bg-white/10 bg-transparent transition-all duration-300">
                   Partner With Us
                 </Button>
               </Link>
