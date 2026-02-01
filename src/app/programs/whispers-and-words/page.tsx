@@ -56,15 +56,15 @@ export default function WhispersAndWords() {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero */}
-        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-primary via-primary to-primary/80 py-20 sm:py-28 overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-2xl" />
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <span className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full">
+              <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Sparkles className="text-white" size={18} />
                 <span className="text-white font-bold text-sm uppercase tracking-wider">Flagship Initiative</span>
               </span>
@@ -73,7 +73,7 @@ export default function WhispersAndWords() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">
                 Whispers and Words
               </h1>
-              <p className="text-lg text-white/80 max-w-2xl mx-auto font-medium">
+              <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
                 An annual celebration of young voices through spoken words, storytelling, and creative expression.
               </p>
             </div>

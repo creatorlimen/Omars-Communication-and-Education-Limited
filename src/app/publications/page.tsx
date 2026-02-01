@@ -31,21 +31,21 @@ export default function Publications() {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero */}
-        <section className="relative bg-gradient-to-br from-secondary via-secondary to-primary/20 py-20 sm:py-28 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-primary via-primary to-primary/80 py-20 sm:py-28 overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-2xl" />
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <span className="inline-block bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <span className="text-white font-bold text-sm uppercase tracking-wider">📚 KNOWLEDGE SHARING</span>
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">
                 Publications
               </h1>
-              <p className="text-lg text-white/80 max-w-2xl mx-auto font-medium">
+              <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
                 Through our publications, Omars shares insights, reflections, and educational content that contribute to ongoing conversations about education, literacy, and youth development.
               </p>
             </div>
