@@ -27,7 +27,7 @@ export function Footer() {
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-105">
                 <span className="text-primary font-black text-2xl">O</span>
               </div>
-              <span className="font-black text-2xl uppercase tracking-tight">O&apos;Mars</span>
+              <span className="font-black text-2xl uppercase tracking-tight">O&apos;MARS</span>
             </div>
             <p className="text-white/80 font-medium leading-relaxed">
               Promoting Education. Amplifying Voices. Driving Impact.
@@ -127,7 +127,7 @@ export function Footer() {
               })}
             </div>
             <p className="text-sm text-white/70 font-medium">
-              © {currentYear} O&apos;Mars Communication and Education Limited. All rights reserved.
+              © {currentYear} O&apos;MARS Communication and Education Limited. All rights reserved.
             </p>
           </div>
         </div>

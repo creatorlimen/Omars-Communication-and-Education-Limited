@@ -40,7 +40,7 @@ export default function About() {
                 <span className="text-sm font-black text-white uppercase tracking-wider">🏢 Our Story</span>
               </span>
               <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6">
-                About O&apos;Mars
+                About O&apos;MARS
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
                 Building trust, clarity, and credibility around our mission to advance education and empower communities.
@@ -57,7 +57,7 @@ export default function About() {
                 <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Who We Are</span>
                 <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-primary mb-6">Our Identity</h2>
                 <p className="text-gray-600 font-medium leading-relaxed mb-4">
-                  O&apos;Mars Communication and Education Limited promotes education through innovative initiatives and community engagement. We empower students, educators, and communities to create lasting impact.
+                  O&apos;MARS Communication and Education Limited promotes education through innovative initiatives and community engagement. We empower students, educators, and communities to create lasting impact.
                 </p>
                 <p className="text-gray-600 font-medium leading-relaxed">
                   Our work spans from scholarship support and capacity building to gender inclusion programs and community engagement initiatives that address real educational challenges.
@@ -84,7 +84,7 @@ export default function About() {
                   Education gaps exist in access, literacy, and student empowerment. These gaps affect millions of learners who don&apos;t have platforms to express themselves or opportunities to develop essential skills.
                 </p>
                 <p className="text-gray-600 font-medium leading-relaxed">
-                  O&apos;Mars bridges these gaps by giving learners platforms to express themselves and develop the communication, confidence, and creativity they need to thrive in a rapidly changing world.
+                  O&apos;MARS bridges these gaps by giving learners platforms to express themselves and develop the communication, confidence, and creativity they need to thrive in a rapidly changing world.
                 </p>
               </div>
             </div>

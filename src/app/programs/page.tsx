@@ -25,7 +25,7 @@ export default function Programs() {
                 Programs & Initiatives
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
-                Education extends beyond classrooms. At O&apos;Mars, we provide platforms that help students explore ideas, express themselves, and develop key skills.
+                Education extends beyond classrooms. At O&apos;MARS, we provide platforms that help students explore ideas, express themselves, and develop key skills.
               </p>
             </div>
           </div>

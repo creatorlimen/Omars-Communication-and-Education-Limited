@@ -47,7 +47,7 @@ export default function Outreach() {
                 Outreach & Advocacy
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
-                At O&apos;Mars Communication and Education Limited, outreach and advocacy are at the heart of our commitment to education promotion and community transformation.
+                At O&apos;MARS Communication and Education Limited, outreach and advocacy are at the heart of our commitment to education promotion and community transformation.
               </p>
             </div>
           </div>

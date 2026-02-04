@@ -42,7 +42,7 @@ export default function WhispersAndWords() {
     {
       number: '3',
       title: 'Showcase Your Work',
-      description: "Share your piece at our events and connect with fellow creatives in the O'Mars community.",
+      description: "Share your piece at our events and connect with fellow creatives in the O'MARS community.",
     },
     {
       number: '4',
