@@ -115,7 +115,7 @@ export default function Gallery() {
               <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Contribute</span>
               <h2 className="text-2xl font-black uppercase tracking-tight text-primary mb-6">Share Your Story</h2>
               <p className="text-gray-600 font-medium leading-relaxed mb-6">
-                Do you have photos from our events or programs? We&apos;d love to feature your images in our gallery. Contact us to submit your photos and help us tell the story of education transformation in Lagos.
+                Do you have photos from our events or programs? We&apos;d love to feature your images in our gallery. Contact us to submit your photos and help us tell the story of education transformation.
               </p>
               <p className="text-sm text-gray-500">
                 All submitted photos must be approved and credited appropriately.

@@ -124,7 +124,7 @@ export default function Programs() {
                     <div className="bg-primary/5 rounded-lg p-4">
                       <h4 className="font-black text-primary uppercase tracking-tight text-sm mb-2">Who It&apos;s For</h4>
                       <p className="text-sm text-gray-600 font-medium">
-                        Students in schools and communities in Lagos state looking to express themselves through words and creative work.
+                        Students in schools and communities nationwide looking to express themselves through words.
                       </p>
                     </div>
                   </div>

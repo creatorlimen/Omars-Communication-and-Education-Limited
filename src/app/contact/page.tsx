@@ -7,8 +7,15 @@ import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { useState } from 'react';
+
+// TikTok icon component (not available in lucide-react)
+const TikTok = ({ size = 24 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -68,30 +75,46 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+234',
-      link: 'tel:+234',
+      phones: [
+        { value: '+234-813-317-4190', link: 'tel:+2348133174190' },
+        { value: '+234-915-556-4722', link: 'tel:+2349155564722' },
+      ],
     },
   ];
 
   const socialLinks = [
     {
-      name: 'Facebook',
-      icon: Facebook,
-      url: 'https://facebook.com/omarseducation',
+      name: 'Instagram',
+      icon: Instagram,
+      url: 'https://www.instagram.com/whispersnwords_/saved/',
+      label: '@omarseducation',
+    },
+    {
+      name: 'YouTube',
+      icon: Youtube,
+      url: 'https://www.youtube.com/feed/you',
+      label: '@omarseducation',
+    },
+    {
+      name: 'TikTok',
+      icon: TikTok,
+      url: 'https://www.tiktok.com/@whispersnwords_',
       label: '@omarseducation',
     },
     {
       name: 'Twitter',
       icon: Twitter,
-      url: 'https://twitter.com/omarseducation',
+      url: 'https://x.com/omars_coms',
       label: '@omarseducation',
     },
     {
-      name: 'Instagram',
-      icon: Instagram,
-      url: 'https://instagram.com/omarseducation',
+      name: 'Facebook',
+      icon: Facebook,
+      url: 'https://web.facebook.com/profile.php?id=61587538823255',
       label: '@omarseducation',
     },
+    
+    
   ];
 
   const reasons = [
@@ -138,6 +161,36 @@ export default function Contact() {
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
               {contactMethods.map((method) => {
                 const Icon = method.icon;
+                
+                // Check if this is a phone card with multiple numbers
+                if ('phones' in method && method.phones) {
+                  return (
+                    <div
+                      key={method.title}
+                      className="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                    >
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full transition-all duration-300 group-hover:w-40 group-hover:h-40" />
+                      <div className="relative">
+                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg shadow-primary/20 flex items-center justify-center mb-4">
+                          <Icon size={24} />
+                        </div>
+                        <h3 className="font-bold uppercase tracking-tight text-primary mb-2">{method.title}</h3>
+                        <div className="space-y-1">
+                          {method.phones.map((phone, index) => (
+                            <a
+                              key={index}
+                              href={phone.link}
+                              className="block text-gray-600 font-medium hover:text-primary transition-colors duration-200"
+                            >
+                              {phone.value}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+                
                 return (
                   <a
                     key={method.title}
