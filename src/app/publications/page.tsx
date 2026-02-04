@@ -46,7 +46,7 @@ export default function Publications() {
                 Publications
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
-                Through our publications, Omars shares insights, reflections, and educational content that contribute to ongoing conversations about education, literacy, and youth development.
+                Through our publications, O&apos;Mars shares insights, reflections, and educational content that contribute to ongoing conversations about education, literacy, and youth development.
               </p>
             </div>
           </div>

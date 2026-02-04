@@ -42,7 +42,7 @@ export default function WhispersAndWords() {
     {
       number: '3',
       title: 'Showcase Your Work',
-      description: 'Share your piece at our events and connect with fellow creatives in the Omars community.',
+      description: "Share your piece at our events and connect with fellow creatives in the O'Mars community.",
     },
     {
       number: '4',
@@ -145,7 +145,7 @@ export default function WhispersAndWords() {
               <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">Eligibility</span>
               <h2 className="text-3xl sm:text-4xl font-black text-primary uppercase tracking-tight mb-4">Who It&apos;s For</h2>
               <p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto">
-                Whispers and Words welcomes all students in schools and communities across Lagos state who are passionate about storytelling, creative writing, and self-expression.
+                Students in schools and communities nationwide looking to express themselves through words.
               </p>
             </div>
 

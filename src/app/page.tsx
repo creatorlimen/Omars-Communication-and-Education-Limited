@@ -240,7 +240,7 @@ export default function Home() {
                 <span className="text-sm font-black text-gray-500 uppercase tracking-wider mb-4 block">About Us</span>
                 <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-primary mb-6">Who We Are</h2>
                 <p className="text-gray-600 font-medium leading-relaxed mb-4">
-                  Omars Communication and Education Limited promotes education through innovative initiatives and community engagement. We empower students, educators, and communities to create lasting impact.
+                  O&apos;Mars Communication and Education Limited promotes education through innovative initiatives and community engagement. We empower students, educators, and communities to create lasting impact.
                 </p>
                 <p className="text-gray-600 font-medium leading-relaxed">
                   Our work spans from scholarship support and capacity building to gender inclusion programs and community engagement initiatives that address real educational challenges.
@@ -264,7 +264,7 @@ export default function Home() {
                   Education gaps exist in access, literacy, and student empowerment. These gaps affect millions of learners who don&apos;t have platforms to express themselves or opportunities to develop essential skills.
                 </p>
                 <p className="text-gray-600 font-medium leading-relaxed">
-                  Omars bridges these gaps by giving learners platforms to express themselves and develop the communication, confidence, and creativity they need to thrive in a rapidly changing world.
+                  O&apos;Mars bridges these gaps by giving learners platforms to express themselves and develop the communication, confidence, and creativity they need to thrive in a rapidly changing world.
                 </p>
               </div>
             </div>

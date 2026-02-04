@@ -215,7 +215,7 @@ export default function Partnerships() {
                 </div>
                 <h2 className="text-2xl font-black uppercase tracking-tight text-primary mb-4">Partner With Us</h2>
                 <p className="text-gray-600 font-medium leading-relaxed mb-8">
-                  We&apos;re always looking for organizations and individuals who share our passion for education, inclusion, and community empowerment. Whether through sponsorships, collaborations, or volunteer support, there are many ways to work with Omars.
+                  We&apos;re always looking for organizations and individuals who share our passion for education, inclusion, and community empowerment. Whether through sponsorships, collaborations, or volunteer support, there are many ways to work with O&apos;Mars.
                 </p>
                 <Link href="/contact">
                   <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/20 rounded-full font-bold transition-all duration-300 hover:scale-105 gap-2">

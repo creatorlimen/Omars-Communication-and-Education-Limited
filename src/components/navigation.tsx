@@ -29,7 +29,7 @@ export function Navigation() {
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 transition-all duration-300 group-hover:scale-105">
               <span className="text-white font-black text-xl">O</span>
             </div>
-            <span className="font-black text-xl text-primary uppercase tracking-tight">Omars</span>
+            <span className="font-black text-xl text-primary uppercase tracking-tight">O&apos;Mars</span>
           </Link>
 
           {/* Desktop Navigation */}

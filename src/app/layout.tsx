@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Omars Communication and Education Limited',
+  title: "O'Mars Communication and Education Limited",
   description: 'Advancing education through advocacy, creative programs, and community engagement. Empowering students and communities.',
   generator: 'v0.app',
   icons: {
