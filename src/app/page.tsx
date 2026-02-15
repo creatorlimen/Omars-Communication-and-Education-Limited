@@ -281,7 +281,7 @@ export default function Home() {
                   <span className="inline-block bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-bold mb-4">👁️ Vision</span>
                   <h3 className="text-2xl font-black uppercase tracking-tight text-primary mb-4">Our Vision</h3>
                   <p className="text-gray-600 font-medium leading-relaxed">
-                    A society where every learner has access to education, opportunities for self-expression, and support to thrive in their personal and professional lives.
+                    To serve as a trusted voice and platform for educational advancement and awareness.
                   </p>
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function Home() {
                   <span className="inline-block bg-accent/10 text-accent px-3 py-1.5 rounded-full text-xs font-bold mb-4">🎯 Mission</span>
                   <h3 className="text-2xl font-black uppercase tracking-tight text-primary mb-4">Our Mission</h3>
                   <p className="text-gray-600 font-medium leading-relaxed">
-                    To advance education through advocacy, creative programs, and public engagement that empowers students and communities to create meaningful, lasting change.
+                    To promote excellence, creativity, and academic curiosity by designing competitive learning experiences that strengthen communication skills (in English and our Mother tongue) and community engagement among students.
                   </p>
                 </div>
               </div>
